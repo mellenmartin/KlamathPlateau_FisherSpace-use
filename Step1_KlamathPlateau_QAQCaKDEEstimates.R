@@ -1,5 +1,6 @@
 #### Klamath Plateau fisher space-use ####
 #### Step 1 -- data grooming & aKDE summaries ####
+#### Martin et al. in review -- forest structure affects fisher space-use ####
 #### data collected by Moriarty, Matthews, et al. ####
 
 # packages
@@ -16,7 +17,7 @@ library(ctmm)
 
 # directory
 setwd("./KlamathPlateau/")
-dat <- read.csv("FisherData_SoOregon_Moriarty_190220_memedit.csv",header=T)
+dat <- read.csv("FisherData_SoOregon_Moriarty_190220.csv",header=T)
 names(dat) = tolower(names(dat)) 
 # create unique ID for individual and deployment
 dat$uniqueID <- paste0(dat$fid_,"-",dat$deployment)
@@ -82,6 +83,7 @@ dat$sex <- ifelse(dat$sex == "F", "Female", "Male")
 dat <- dat[order(dat$fid_, dat$datetimenew),]  #order the database by id and date
 
 #### autocorrelated kernel density estimates for supplementary/BLM/USFWS summary
+#### code derived from Signer and Fieberg 2021
 library(foreign)
 library(tidyverse)
 library(dplyr)
@@ -134,4 +136,4 @@ fisher_hr_table <- iso_hr_akde_ouf_unn %>% dplyr::select(-geometry)
 write.csv(fisher_hr_table, file = "KlamathPlateau_aKDEEstimates.csv", row.names = FALSE)
 
 ##### write the cleaned dat for dBBMMs and further processing for the iSSF, etc
-write.csv(dat, file = "FisherData_SoOregon_Moriarty_190220_cleaned230525.csv", row.names = FALSE)
+write.csv(dat, file = "FisherData_SoOregon_Moriarty_190220_cleaned.csv", row.names = FALSE)
