@@ -59,7 +59,6 @@ dat <- dat %>%  filter(!between(id,7673,7681),
                        !between(id,102101,102103))
 
 ####
-# take a look at the points in mapview to find and drop outliers
 fish <- dat
 coordinates(fish) <- c("easting","northing")
 proj4string(fish) <- "+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +init=epsg:26910"
@@ -82,7 +81,7 @@ dat$sex <- substr(dat$uniqueID,1,1)
 dat$sex <- ifelse(dat$sex == "F", "Female", "Male")
 dat <- dat[order(dat$fid_, dat$datetimenew),]  #order the database by id and date
 
-####
+#### autocorrelated kernel density estimates for supplementary/BLM/USFWS summary
 library(foreign)
 library(tidyverse)
 library(dplyr)
