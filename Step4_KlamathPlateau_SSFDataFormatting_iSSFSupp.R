@@ -1,5 +1,5 @@
 #### Klamath Plateau fisher space-use ####
-#### Step 3 -- extracting covariates, prepping data, running iSSFs for supplementary ####
+#### Step 4 -- extracting covariates, prepping data, running iSSFs for supplementary ####
 #### Martin et al. in review -- forest structure affects fisher space-use ####
 #### data collected by Moriarty, Matthews, et al. ####
 
