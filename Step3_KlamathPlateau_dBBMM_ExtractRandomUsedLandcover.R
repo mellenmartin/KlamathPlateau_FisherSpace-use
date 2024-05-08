@@ -20,7 +20,7 @@ library(landscapetools)
 ##### load in and bind BBMM shapefiles #####
 library(sf)
 library(dplyr)
-wd <- "./KlamathPlateau/dBBMMs/dBBMMContours"
+wd <- "./KlamathPlateau/dBBMMs"
 setwd(wd)
 
 # load in HR contours
@@ -31,7 +31,7 @@ bbmm.list <- list()
 
 ## Import all bbmm shapefiles, add individual identifiers, calculate area, and calculate stream density
 for(i in 1:length(filenames)){
-  wd <- "./KlamathPlateau/dBBMMs/dBBMMContours"
+  wd <- "./KlamathPlateau/dBBMMs"
   setwd(wd)
   
   # set CRS for the shapefiles
