@@ -1,5 +1,5 @@
 #### Klamath Plateau fisher space-use ####
-#### Step 4 -- fitting SSFs with GLMMTMB for main manuscript results ####
+#### Step 5 -- fitting SSFs with GLMMTMB for main manuscript results ####
 #### Martin et al. in review -- forest structure affects fisher space-use ####
 #### data collected by Moriarty, Matthews, et al. ####
 
