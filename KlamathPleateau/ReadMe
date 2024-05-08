@@ -1,3 +1,11 @@
 #### Data, rasters, and shapefiles for Klamath Plateau fisher space-use ####
 #### Martin et al. in review -- forest structure affects fisher space-use ####
 #### data collected by Moriarty, Matthews, et al. ####
+
+
+
+KlamathPlateau_FisherSSFLocs_UsedandRandom.zip
+# zipped folder which has (huge) .csv named KlamathPlateau_FisherSSFLocs_UsedandRandom.csv which contains used and random fisher locations 
+# random locations generated via observed turn angle and step length distributions following code in .R file 'Step3_KlamathPlateau_SSFDataFormatting_iSSFSupp'
+
+
