@@ -6,7 +6,7 @@
 
 KlamathPlateau_FisherSSFLocs_UsedandRandom.zip
 # zipped folder which has (huge) .csv named KlamathPlateau_FisherSSFLocs_UsedandRandom.csv which contains used and random fisher locations 
-# random locations generated via observed turn angle and step length distributions following code in .R file 'Step3_KlamathPlateau_SSFDataFormatting_iSSFSupp'
+# random locations generated via observed turn angle and step length distributions following code in .R file 'Step4_KlamathPlateau_SSFDataFormatting_iSSFSupp'
 # please note that start (x1, y1) and end (x2, y2) locations have been scaled given the conservation status of fishers in the region 
 
 
