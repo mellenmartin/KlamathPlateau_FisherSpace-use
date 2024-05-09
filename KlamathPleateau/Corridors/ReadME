@@ -1,3 +1,7 @@
 #### Movement paths with corridor classification from "move" package ####
 #### Martin et al. in review -- forest structure affects fisher space-use ####
 #### data collected by Moriarty, Matthews, et al. ####
+
+KlamathPlateau_allfisherlines_HRCovs
+# csv file containing all extracted habitat data for buffered fisher movement paths with each row representing a path segment
+
