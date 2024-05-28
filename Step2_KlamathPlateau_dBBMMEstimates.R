@@ -40,7 +40,6 @@ proj4string(fisher) <- "+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +init=epsg:
 # create Brownian Bridge movement models ####
 #-------------------------------------------#
 
-# We need to mark whether there are locations that are greater than 8 or so hours apart (BB analyses choke on this)
 fisher <- fisher[order(fisher$uniqueID, fisher$datetimenew),]  #order the database by id and date
 dif <- c(as.numeric(diff(as.numeric(fisher$datetime))),0)  #change in time between points (in hrs)
 dif[c(diff(as.numeric(as.factor(paste(fisher$uniqueID)))),0) != 0] <- 0 #replace the difs when it switches individual/season with a 0
@@ -48,9 +47,8 @@ fisher$dif <- dif
 
 hist(dif)
 hist(dif[dif < 10000])
-table(dif > 14400)    #how often are your points > 8 hour apart?
+table(dif > 14400)    
 
-#add a burst column for when there are breaks larger than 4 hours in the data 
 MaxFixInterval <- 14400     # identify your max interval as an object because we'll use it later
 fisher$connect <- ifelse(fisher$dif > MaxFixInterval, "no", "yes")
 table(fisher$connect)
