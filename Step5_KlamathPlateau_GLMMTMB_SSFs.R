@@ -20,7 +20,6 @@ dat_ssf$fisher = substr(dat_ssf$uniqueID, 1, 4)
 dat_ssf$fishernum <- as.numeric(unique(dat_ssf$fisher))
 dat_ssf$julian <- yday(dat_ssf$t2_)
 dat_ssf$season <- ifelse(dat_ssf$julian>79 & dat_ssf$julian<264, "Summer", "Winter")
-dat_ssf$step_id3 <- paste0(as.numeric(factor(dat_ssf$fishernum)),"-", dat_ssf$burst_)
 randlocs <- dat_ssf %>% dplyr::filter(case_ == "FALSE")
 usedlocs <- dat_ssf %>% dplyr::filter(case_ != "FALSE")
 
@@ -40,7 +39,7 @@ TMBStruc <- glmmTMB(y ~ -1 + scc_end
                     + sdistedge
                     + sccdiff_end
                     + shgtdiff_end
-                    + (1|step_id3) 
+                    + (1|step_id2) 
                     + (0 + scc_end | fisher)
                     + (0 + I(scc_end^2) | fisher)
                     + (0 + sheight_end| fisher)
